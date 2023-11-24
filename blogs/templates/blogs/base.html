@@ -1,13 +1,50 @@
-<p>
-  <a href="{% url 'blogs:index' %}">Main</a> -
-  <a href="{% url 'blogs:posts' %}">Posts</a> -
-  {% if user.is_authenticated %}
-    Hello, {{ user.username }}.
-  <a href="{% url 'users:logout' %}">Log out</a>
-  {% else %}
-    <a href="{% url 'users:register' %}">Register</a> -
-    <a href="{% url 'users:login' %}">Log in</a>
-  {% endif %}
-</p>
+<!doctype html>
 
-{% block content %}{% endblock content %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Blog</title>
+
+  {% load bootstrap4 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript jquery='full' %}
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border">
+  <a class="navbar-brand" href="{% url 'blogs:index' %}">Blog</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+    data-target="#navbarColapse" aria-controls="navbarCollapse"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'blogs:posts' %}">Posts</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      {% if user.is_authenticated %}
+        <li class="nav-item">
+          <span class="navbar-text">Hello, {{ user.username }}!</span>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'users:logout' %}">Log out</a>
+        </li>
+      {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'users:register' %}">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'users:login' %}">Log in</a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+</body>
+
+</html>
