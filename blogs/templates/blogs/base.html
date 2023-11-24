@@ -26,6 +26,13 @@
         <a class="nav-link" href="{% url 'blogs:posts' %}">Posts</a>
       </li>
     </ul>
+
+<!--Поисковая строка. Проверить работу -->
+    <form class="d-flex mr-auto" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+
     <ul class="navbar-nav ml-auto">
       {% if user.is_authenticated %}
         <li class="nav-item">
@@ -45,6 +52,16 @@
     </ul>
   </div>
 </nav>
+
+<main role="main" class="container">
+  <div class="pb-2 mb-2 border-bottom">
+    {% block page_header %}{% endblock page_header %}
+  </div>
+  <div>
+    {% block content %}{% endblock content %}
+  </div>
+</main>
+
 </body>
 
 </html>
