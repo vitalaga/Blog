@@ -1,0 +1,23 @@
+[33mcommit 65e9a410e9a56e8d63bc1035b108de9d79c71d4d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Vitaly <vitalage@yandex.ru>
+Date:   Sun Nov 26 00:58:17 2023 +0300
+
+    upgrade index.html, login.html
+
+[33mcommit a1e12be51c00678290baa5a56ea5c44135bde495[m
+Author: Vitaly <vitalage@yandex.ru>
+Date:   Sat Nov 25 02:03:14 2023 +0300
+
+    Fixed base.html
+
+[33mcommit d785dc50a5a3fa7d2774299ba2028cdffe7862d6[m
+Author: Vitaly <vitalage@yandex.ru>
+Date:   Sat Nov 25 01:51:01 2023 +0300
+
+    Uploaded django-bootstrap4, update base.html
+
+[33mcommit 674332e643e289c68dd28a4dcac1887dc5fb624b[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Vitaly <vitalage@yandex.ru>
+Date:   Tue Nov 21 20:29:06 2023 +0300
+
+    initial commit
