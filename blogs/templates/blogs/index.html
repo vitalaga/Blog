@@ -1,5 +1,13 @@
 {% extends "blogs/base.html" %}
 
-{% block content %}
-<p>The Blog service allows you to watch useful articles from other users, as well as write your own.</p>
-{% endblock content %}
+{% block page_header %}
+  <div class="jumbotron">
+    <h1 class="display-3">Start a blog, write articles!</h1>
+    <p class="lead">Here you can:
+      <br/>Create your own blog: share your thoughts, ideas and experiences, talking about yourself and your hobbies.
+      <br/>Write articles on topics that interest you:
+      express your opinion, analyze events, or simply share useful information.</p>
+
+    <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}" role="button">Register &raquo;</a>
+  </div>
+{% endblock page_header %}
